@@ -1,0 +1,128 @@
+/*font styles*/
+body{
+	background-color: #f2f2f2;
+	color: #022449;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+ 	font-weight: 500;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Quicksand', sans-serif;
+ 	font-weight: 500;
+ 	color: white;
+}
+
+/*header color*/
+.header{
+	background-color: /*#55bdca*/#022449;
+	border-bottom: 2px solid #f27d42;
+}
+
+/*button properties*/
+button[type="button"]{
+	background-color: #f27d42;
+	padding: 5px 20px;
+	color: #022449;
+	border: 3px;
+	border-radius: 22px;
+	float: right;
+}
+
+
+/*header properties*/
+.header .row{
+	width:  90%;
+	margin: auto;
+	padding: 15px;
+	display: flex;
+}
+.flex-item-left{
+	flex: 50%;
+}
+.flex-item-right{
+	flex: 50%;
+}
+
+/*button Hover*/
+button[type="button"]:hover{
+	transition-duration: 0.2s;
+	color: #022449;
+	background-color:  white;
+	border: 2px solid #f27d42;
+}
+
+/*form properties*/
+.container-fluid{
+	background-color:  white;
+	width:  95%;
+	margin-top: 20px;
+	padding:  30px 6px;
+	color: #022449;
+	border-radius: 10px;
+	box-shadow: 2px 1px 6px black;
+}
+.container-fluid .row{
+	width: 90%;
+	margin: auto;
+
+}
+
+/*form headers*/
+.container-fluid h3{
+	width: 100%;
+	margin: auto;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #022449;
+	color: #022449;
+}
+
+.container-fluid input{
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid teal;
+	background-color: #f2f2f2;
+}
+
+label{
+	padding-top: 4px;
+}
+
+.gender{
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid teal;
+	background-color: #f2f2f2;
+}
+
+
+button[type="button1"]{
+	background-color: #022449;
+	padding: 5px 20px;
+	color: white;
+	border: 3px/* solid #f27d42*/;
+	border-radius: 22px;
+	margin-top: 10px;
+}
+button[type="button2"]{
+	background-color: #f27d42;
+	padding: 5px 20px;
+	color: white;
+	border: 3px;
+	border-radius: 22px;
+	margin-top: 10px;
+}
+
+button[type="button1"]:hover{
+	color: #022449;
+	background-color:  white;
+	border: 1px solid #022449;
+	box-shadow: 2px 2px 4px #022449;
+}
+button[type="button2"]:hover{
+	color: #f27d42;
+	background-color:  white;
+	border: 2px solid #f27d42;
+	box-shadow: 2px 2px 4px #f27d42;
+}
