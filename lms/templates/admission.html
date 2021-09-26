@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--Require tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--link to Bootstrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--external fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
+    <!--Boootstrap 4 icons_link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!--Link to external style sheet-->
+    <link rel="stylesheet" type="text/css" href="../static/css/admission.css">
+
+    <title>Admission form</title>
+
+</head>
+<body>
+
+
+    <!--Header-->
+    <header>
+        <div class="header">
+            <div class="row">
+                <div class="flex-item-left">
+                    <h1>Smart</h1>
+                </div>
+                
+                <div class="flex-item-right">
+                    <button type="button"><i class="bi bi-x-circle"></i> Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!--Admission form-->
+    <div class="container-fluid">
+        <form>
+            <!--form header-->
+            <div class="form-group">
+                <div class="row">
+                    <h3><i class="bi bi-file-earmark-text"></i> Personal Information</h3>
+                </div>
+            </div>
+            
+            <!--data set-->
+            <div class="form-group">
+                <div class="row" style="padding-top: 10px">
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>First Name:</label><br>
+                        <input type="text" name="firstName" placeholder="Enter your first name">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Last Name:</label><br>
+                        <input type="text" name="lastName" placeholder="Enter your last name">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Middle Name:</label><br>
+                        <input type="text" name="middleName" placeholder="Enter your last name">
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <label>Date of Birth:</label><br>
+                        <input type="date" name="date">
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <label>Gender:</label><br>
+                        <select class="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <label>Hometown:</label><br>
+                        <select class="gender">
+                            <option>    Western North Region    </option>
+                            <option>    Western Region  </option>
+                            <option>    Volta Region    </option>
+                            <option>    Greater Accra Region    </option>
+                            <option>    Eastern Region  </option>
+                            <option>    Ashanti Region  </option>
+                            <option>    Central Region  </option>
+                            <option>    Northern Region </option>
+                            <option>    Upper East Region   </option>
+                            <option>    Upper West Region   </option>
+                            <option>    Oti Region  </option>
+                            <option>    Bono East Region    </option>
+                            <option>    Ahafo Region    </option>
+                            <option>    Bono Region </option>
+                            <option>    North East Region   </option>
+                            <option>    Savannah Region </option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <label>Religion:</label><br>
+                        <select class="gender">
+                            <option>Christianity</option>
+                            <option>Traditional</option>
+                            <option>Islam</option>
+                            <option>Jehovah's Witness</option>
+                            <option>Hinduism</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
+                        <label>Email:</label><br>
+                        <input type="email" name="email" placeholder="smart@example.com">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--Parent or Guardian Info ==========================-->
+            <div class="form-group" style="padding-top: 30px">
+                <div class="row">
+                    <h3><i class="bi bi-person-lines-fill"></i> Parent/ Guardian Details</h3>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <label>Name of Parent/ Guardian:</label><br>
+                    <input type="text" name="fullName" placeholder="Parent/Guardian full name">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Address Line:</label><br>
+                        <input type="text" name="firstName" placeholder="Address (name or C/o)">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Occupation:</label><br>
+                        <input type="text" name="occupation" placeholder="Work/ Skill">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Contact Number:</label><br>
+                        <input type="number" name="contact" placeholder="Mobile Number">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Email:</label><br>
+                        <input type="email" name="email" placeholder="smart@example.com">
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <!--Submit buttons-->
+            <div class="form-group">
+                <div class="row" id="submit_button">
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-sm-12">
+                        <button type="button1"><i class="bi bi-x-circle"></i> Save & Exit</button>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <button type="button2"><i class="bi bi-check-circle"></i> Submit</button>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>
