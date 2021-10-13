@@ -1,11 +1,13 @@
+{% load static%}
 <html>
 <head>
   <meta charset="utf-8">
   <title>Prep: Log in </title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
+  {% block content%}
   <div class="login-root">
     <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
       <div class="loginbackground box-background--white padding-top--64">
@@ -49,35 +51,27 @@
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Sign in to your account</span>
               <form id="stripe-login">
+                {% csrf_token %}
                 <div class="field padding-bottom--24">
-                  <label for="User-ID">User ID</label>
-                  <input type="USer-ID" name="User ID">
+                  <label for="User-ID">Index number</label>
+                  <input type="USer-ID" name="id">
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
-                    <label for="password">Password</label>
+                    <label for="password">Pin</label>
                     <div class="reset-pass">
                       <a href="#">Forgot your password?</a>
                     </div>
                   </div>
-                  <input type="password" name="password">
-                </div>
-                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
-                  <label for="checkbox">
-                    <input type="checkbox" name="checkbox"> Stay signed in for a week
-                  </label>
+                  <input type="password" name="pin">
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="submit" name="submit" value="Log in">
-                </div>
-                <div class="field">
-                  <a class="ssolink" href="#">sign in with Google</a>
                 </div>
               </form>
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>Don't have an account? <a href="">Sign up</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="#">© Smart International School</a></span>
               <span><a href="#">Contact</a></span>
@@ -88,6 +82,7 @@
       </div>
     </div>
   </div>
+  {% endblock %}
 </body>
 
 </html>

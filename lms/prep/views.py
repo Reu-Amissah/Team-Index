@@ -12,7 +12,7 @@ def loginPage(request):
         return redirect('home')
     else:
         if request.method == 'POST':
-            id = request.POST.get('username')
+            id = request.POST.get('id')
             pin = request.POST.get('pin')
 
             user = authenticate(request, username=id, password=pin)
@@ -21,9 +21,9 @@ def loginPage(request):
                 return redirect('home')
             else:
                 messages.info(request, 'id or pin is incorrect')
-                return render(request, 'landingPage.html', {})
+                return render(request, 'home.html', {})
         context = {}
-        return render(request, 'landingPage.html', context)
+        return render(request, 'login.html', context)
 
 def admissionForm(request):
     context = {}
