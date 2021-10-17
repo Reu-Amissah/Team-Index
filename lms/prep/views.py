@@ -5,7 +5,8 @@ from django.contrib import messages
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Hello world")
+    context={}
+    return render(request, 'index.html', context)
 
 def loginPage(request):
     if request.user.is_authenticated:
