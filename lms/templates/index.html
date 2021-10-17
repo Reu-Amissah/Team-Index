@@ -1,3 +1,4 @@
+{% load static%}
 <!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
@@ -17,30 +18,23 @@
     <meta name="author" content="">
     
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
 
 	<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
 	
     <!-- Custom & Default Styles -->
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/carousel.css">
-    <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}">
 
 
 </head>
 <body>  
-
-    <!-- LOADER -->
-    <div id="preloader">
-        <img class="preloader" src="../images/loader.gif" alt="">
-    </div><!-- end loader -->
-    <!-- END LOADER -->
-
     <div id="wrapper">
         <!-- BEGIN # MODAL LOGIN -->
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
@@ -69,7 +63,7 @@
                         <div class="col-md-6 col-sm-6 text-left">
                             <p>
                                 <strong><i class="fa fa-phone"></i></strong> +233 241 397 137 &nbsp;&nbsp;
-                                <strong><i class="fa fa-envelope"></i></strong> <a href="mailto:#">rhiansugden99@gmail.com</a>
+                                <strong><i class="fa fa-envelope"></i></strong> <a href="#">rhiansugden99@gmail.com</a>
                             </p>
                         </div><!-- end left -->
                         <div class="col-md-6 col-sm-6 hidden-xs text-right">
@@ -95,17 +89,15 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="logo-normal">
-                            <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt=""></a>
+                            <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.png' %}" alt=""></a>
                         </div>
                     </div>
 
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="admission.html">Admissions</a></li>
-                            <li><a href="login.html">login</a></li>
+                            <li><a href="{% url 'admissionForm' %}">Admissions</a></li>
+                            <li><a href="{% url 'loginPage' %}">login</a></li>
      
                         </ul>
                     </div>
@@ -145,47 +137,6 @@
                             <h2>We are a passionate <mark>learning system</mark> from<br>
                             Ghana(LEGON). Do beautiful and easy-to-use digital <br>
                             design & web development</h2>
-
-                            <p>Nam dictum sem, ipsum aliquam . Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Integer lectus. Praesent sed nisi eleifend, fermentum orci amet, iaculis libero.</p>
-
-                            <hr class="invis">
-
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
-                                    <ul class="check">
-                                        <li>Custom Shortcodes</li>
-                                        <li>Visual Page Builder</li>
-                                        <li>Unlimited Shortcodes</li>
-                                        <li>AI and Machine Learning</li>
-                                        <li>Tons of Layouts</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                    <ul class="check">
-                                        <li>Font Awesome Icons</li>
-                                        <li>Pre-Defined Colors</li>
-                                        <li>AJAX Transitions</li>
-                                        <li>High Quality Support</li>
-                                        <li>Unlimited Options</li>
-                                    </ul><!-- end check -->    
-                                </div><!-- end col-lg-4 -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 last">
-                                    <ul class="check">
-                                        <li>Shopping Layouts</li>
-                                        <li>Pre-Defined Fonts</li>
-                                        <li>Style Changers</li>
-                                        <li>Footer Styles</li>
-                                        <li>Header Styles</li>
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 --> 
-                            </div><!-- end row -->   
-
-                            <hr class="invis">
-
-                            <div class="btn-wrapper">
-                                <a href="#" class="btn btn-primary">Learn More About us</a>
-                            </div>
-
                         </div><!-- end module -->
                     </div><!-- end col -->
                 </div><!-- end row -->
@@ -244,13 +195,13 @@
                 </div><!-- end row -->
             </div><!-- end container -->
         </section>
-
+<!--
         <section class="section gb">
             <div class="container">
                 <div class="section-title text-center">
                     <h3>Recent News</h3>
                     <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur accumsan arcu, sit amet fringilla ex ultricies.</p>
-                </div><!-- end title -->
+                </div>
 
                 <div class="row">
                     <div class="col-lg-4 col-md-12">
@@ -260,12 +211,12 @@
                                 <div class="magnifier">
                                      <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
                                 </div>
-                            </div><!-- end image-wrap -->
+                            </div>
 
                             <div class="blog-desc">
                                 <h4><a href="blog-single.html">How to learn perfect code with Javascript</a></h4>
                                 <p>Praesent at suscipit ligula. Suspendisse pre neque, quis suscipit enim. sed maximus, mia auctor.</p>
-                            </div><!-- end blog-desc -->
+                            </div>
 
                             <div class="post-meta">
                                 <ul class="list-inline">
@@ -273,9 +224,9 @@
                                     <li><a href="#">by WP Destek</a></li>
                                     <li><a href="#">14 Share</a></li>
                                 </ul>
-                            </div><!-- end post-meta -->
-                        </div><!-- end blog -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-lg-4 col-md-12">
                         <div class="blog-box">
@@ -284,22 +235,21 @@
                                 <div class="magnifier">
                                      <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
                                 </div>
-                            </div><!-- end image-wrap -->
+                            </div>
 
                             <div class="blog-desc">
                                 <h4><a href="blog-single.html">The most suitable web design & development tutorials</a></h4>
                                 <p>Sed suscipit neque in erat posuere tristique aliquam porta vestibulum. Cras placerat tincidunt. </p>
-                            </div><!-- end blog-desc -->
-
+                            </div>
                             <div class="post-meta">
                                 <ul class="list-inline">
                                     <li><a href="#">20 March 2017</a></li>
                                     <li><a href="#">by WP Destek</a></li>
                                     <li><a href="#">11 Share</a></li>
                                 </ul>
-                            </div><!-- end post-meta -->
-                        </div><!-- end blog -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-lg-4 col-md-12">
                         <div class="blog-box">
@@ -308,12 +258,12 @@
                                 <div class="magnifier">
                                      <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
                                 </div>
-                            </div><!-- end image-wrap -->
+                            </div>
 
                             <div class="blog-desc">
                                 <h4><a href="blog-single.html">Design for all mobile devices! This is name "responsive"</a></h4>
                                 <p>Suspendisse scelerisque ex ac mattis molestie vel enim ut massa placerat faucibus sed ut dui vivamus. </p>
-                            </div><!-- end blog-desc -->
+                            </div>
 
                             <div class="post-meta">
                                 <ul class="list-inline">
@@ -321,13 +271,13 @@
                                     <li><a href="#">by WP Destek</a></li>
                                     <li><a href="#">44 Share</a></li>
                                 </ul>
-                            </div><!-- end post-meta -->
-                        </div><!-- end blog -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
+    -->
         
         <footer class="section footer noover">
             <div class="container">
@@ -385,13 +335,13 @@
     </div><!-- end wrapper -->
 
     <!-- jQuery Files -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/carousel.js"></script>
-    <script src="../js/animate.js"></script>
-    <script src="../js/custom.js"></script>
+    <script src="{%static 'js/homepage/jquery.min.js' %}"></script>
+    <script src="{% static 'js/homepage/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/homepage/carousel.js' %}"></script>
+    <script src="{% static 'js/homepage/animate.js' %}"></script>
+    <script src="{% static 'js/homepage/custom.js' %}"></script>
     <!-- VIDEO BG PLUGINS -->
-    <script src="../js/videobg.js"></script>
+    <script src="{% static 'js/homepage/videobg.js' %}"></script>
 
 </body>
 </html>
