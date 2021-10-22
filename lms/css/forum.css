@@ -1,0 +1,153 @@
+body{
+  background-color: #e6fefd;
+  display: flex;
+  width: 100%;
+  margin: 0px;
+}
+
+ .container{
+ 	width: 100%;
+
+  /*align-items: stretch;*/
+
+}
+
+.nav{
+	height: 10%;
+	background-color: #022449;
+	margin-top: -20px;
+	margin-bottom: -10px;
+	/*box-shadow: 0 0 2px 2px grey;*/
+}
+
+.chat{
+	display: grid;
+	border-radius: 5px;
+	grid-template-rows: 75%, 10%;
+	background-color: #cde5fe;
+	width: 100%;
+	margin:auto;
+}
+
+.chats{
+	padding: 0;
+  margin: 0;
+  background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+  background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: flex-end;
+	height: 520px;
+	background-color: white;
+	margin-bottom: 10px;
+	border-radius: 4px;
+
+}
+
+.tt{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: #022449;
+	
+}
+
+.tar{
+	width: 60%;
+  height: 49px;
+	border-radius: 4px;
+}
+
+.ttt{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #f27d42 ;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+.chatter{
+	margin: 0 auto;
+  max-width: 70%;
+  padding: 0 20px;
+}
+
+div.chatter{
+	 overflow: auto;
+	 width: 100%;
+	 scroll-behavior: smooth;
+}
+
+.yoo {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.yoo::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.yoo img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.yoo img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+
+
+
+/*Scroll Bar*/
+/* width */
