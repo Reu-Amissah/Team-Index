@@ -10,7 +10,7 @@ class AdmissionForm():
     dob = models.DateField(null=False, blank=False)
     gender = models.CharField(null=False, blank=False)
     hometown = models.CharField(null=False, blank=False)
-    religion = models.Charfield(null=False, blank=False)
+    religion = models.CharField(null=False, blank=False)
     email = models.EmailField(null=False, blank=False)
 
     #parent details
