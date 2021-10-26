@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Forum Discusssion</title>
-	<link rel="stylesheet" type="text/css" href="../css/forum.css" >
+	<link rel="stylesheet" type="text/css" href="{% static 'css/forum.css' %}" >
 </head>
 
 <body>
@@ -18,13 +19,13 @@
 					<h2>Chat Messages</h2>
 
 					<div class="yoo">
-					  <img src="../images/ava.jpg" alt="Avatar" style="width:100%;">
+					  <img src="{% static 'images/ava.jpg' %}" alt="Avatar" style="width:100%;">
 					  <p>Hello. How are you today?</p>
 					  <span class="time-right">11:00</span>
 					</div>
 
 					<div class="yoo darker">
-					  <img src="../images/ava.jpg" alt="Avatar" class="right" style="width:100%;">
+					  <img src="{% static 'images/ava.jpg' %}" alt="Avatar" class="right" style="width:100%;">
 					  <p>Hey! I'm fine. Thanks for asking!</p>
 					  <span class="time-left">11:01</span>
 					</div>

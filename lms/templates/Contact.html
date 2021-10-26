@@ -1,3 +1,4 @@
+{% load static %}
 <html>
     <meta charset="UTF-8">
     <head>
@@ -343,7 +344,7 @@ header .navigation li a:hover{
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">LMS</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
             
             </ul>
         </header>
