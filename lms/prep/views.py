@@ -29,3 +29,11 @@ def loginPage(request):
 def admissionForm(request):
     context = {}
     return render(request, 'admission.html', context)
+
+def forum(request):
+    context = {}
+    return render(request, "forum.html", context)
+
+def contact(request):
+    context = {}
+    return render(request, "Contact.html", context)
