@@ -1,0 +1,341 @@
+{% load static%}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+
+        <title>Smart International School</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Smart International School</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+
+                        <!-- lms link -->
+                        <li class="nav__item">
+                            <a href="./lms.html" class="nav__link">LMS</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="file:///C:/Users/23350/Downloads/Contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="{% static 'images/image2.jpg' %}" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">Prepare for all</span>
+                        <h1 class="home__data-title"> Challenges<br><b>Excellence</b><br> in everything</h1>
+                        <a href="#" class="button">Explore</a>
+
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__info">
+                        <div>
+                            <span class="home__info-title">Learning Management System</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="{% static 'images/images6.png' %}" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">More Information <br> About The School</h2>
+                        <p class="about__description">Our mission is to provide individualized education 
+                            that addresses students’ unique learning styles, cultivates independent thought, 
+                            and promotes the building of character, enabling them to contribute
+                             to their communities in meaningful and positive ways.
+                        </p>
+                        <a href="#" class="button">Get Started</a>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="{% static 'images' %}" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="{% static 'images/Image1.png' %}" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== DISCOVER SECTION====================-->
+            <section class="discover section" id="discover">
+                <h2 class="section__title">Academics</h2>
+                
+                <div class="discover__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== DISCOVER 1 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="{% static 'images/primary.jpg' %}" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Primary</h2>
+                                <span class="discover__description">from 6-13</span>
+                            </div>
+                        </div>
+
+                        <!--==================== DISCOVER 2 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="{% static 'images/jhs.jpg' %}" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">JHS</h2>
+                                <span class="discover__description">ages:14-17</span>
+                            </div>
+                        </div>
+
+                     
+
+                        <!--==================== DISCOVER 4 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="{% static 'images/nusery.jpg' %}" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Nusery & KG</h2>
+                                <span class="discover__description">ages:2-6 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                <h2 class="section__title">With Our Experience <br> We Will Serve You</h2>
+
+                <div class="experience__container container grid">
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number">Experienced</h2>
+                            <span class="experience__description">Teachers <br></span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">Discipline</h2>
+                            <span class="experience__description">Students</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">Compansionate</h2>
+                            <span class="experience__description">Environment</span>
+                        </div>
+                    </div>
+
+                    <div class="experience__img grid">
+                        <div class="experience__overlay">
+                            <img src="{% static 'images/images4.png' %}" alt="" class="experience__img-one">
+                        </div>
+                        
+                        <div class="experience__overlay">
+                            <img src="{% static 'images/image3.jpg' %}" alt="" class="experience__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Video Tour</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Find out more with our video of the most beautiful and 
+                        pleasant places for you and your family.
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="{% static 'video/video.mp4' %}" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+           
+
+            <!--==================== SUBSCRIBE ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title">More Information <br> Newsletter</h2>
+                        <p class="subscribe__description">You can send us mail
+                        </p>
+    
+                        <form action="" class="subscribe__form">
+                            <input type="text" placeholder="Enter email" class="subscribe__input">
+    
+                            <button class="button">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">SIS | Smart International School</h3>
+                        <p class="footer__description">Educational Institution in Tema <br>Open today until 5:00pm
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Contact</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">0262793951</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">0244793951</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">0245032764</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Location</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Kpone Kokompe</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Tema</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Ghana</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Office Hours</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Mon:7:00am - 5:00pm</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Tue:7:00am - 5:00pm</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Wed:7:00am - 5:00pm</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Thu:7:00am - 5:00pm</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Fri:7:00am - 5:00pm</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2021 Smart International. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
