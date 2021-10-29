@@ -6,7 +6,7 @@ from django.contrib import messages
 
 def home(request):
     context={}
-    return render(request, 'index.html', context)
+    return render(request, 'main.html', context)
 
 def loginPage(request):
     if request.user.is_authenticated:
@@ -37,3 +37,4 @@ def forum(request):
 def contact(request):
     context = {}
     return render(request, "Contact.html", context)
+
