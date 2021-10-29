@@ -4,8 +4,8 @@ IMPORT
 
 @font-face {
     font-family: "Flaticon";
-    src: url("{% static 'fonts/Flaticon.eot' %}");
-    src: url("{% static 'fonts/Flaticon.eot?#iefix' %}") format("embedded-opentype"), url("{% static 'fonts/Flaticon.woff' %}") format("woff"), url("{ static 'fonts/Flaticon.ttf' %}") format("truetype"), url("{% static 'fonts/Flaticon.svg#Flaticon' %}") format("svg");
+    src: url("/static/fonts/Flaticon.eot'}");
+    src: url("/static/fonts/Flaticon.eot?#iefix'") format("embedded-opentype"), url("/fonts/Flaticon.woff") format("woff"), url("/static/fonts/Flaticon.ttf") format("truetype"), url("/fonts/Flaticon.svg#Flaticon") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -13,7 +13,7 @@ IMPORT
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family: "Flaticon";
-        src: url("{% static 'fonts/Flaticon.svg#Flaticon' %}") format("svg");
+        src: url("/static/fonts/Flaticon.svg#Flaticon") format("svg");
     }
 }
 
