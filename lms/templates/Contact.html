@@ -341,9 +341,9 @@ header .navigation li a:hover{
   <header>
             <a href="#" class="logo">Smart International School<span>.</span></a>
             <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">LMS</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'home' %}">About</a></li>
+            <li><a href="{% url 'loginPage' %}">LMS</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
             
             </ul>
