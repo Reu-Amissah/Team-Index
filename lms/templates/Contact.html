@@ -5,7 +5,7 @@
     <title>
         Contact | Smart International School
         </title>
-    </head>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
@@ -334,7 +334,30 @@ header .navigation li a:hover{
   }
 }
     </style>
+    <script type="text/javascript">
+      var user = '{{request.user}}'
+      //creating the csrf token
+      function getToken(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    const csrftoken = getToken('csrftoken');
+
+    </script>
+  </head>
     <body>
+      {% load static%}
     
  
 <nav class="page-header text-center">
@@ -363,40 +386,41 @@ header .navigation li a:hover{
             <h3 class="contact-title">Drop us a line</h3>
              <p class="contact-desc"> Please note that our Office would be opened  from Monday to Friday: 10 a.m to 5 p.m</p>
             <p class="contact-desc">For more information :</p>
-            <form id="contact-form" class="mt-5" action="#" method="post">
+            <form id="contact-form" class="mt-5" action="" method="post">
+              {% csrf_token %}
                <div class="row">
                   <div class="col-12 col-lg-6">
                      <div class="form-group">
                         <label>First Name :</label>
-                        <input type="text" class="form-control" id="firstname">
+                        <input type="text" class="form-control" id="firstname" name="firstname">
                      </div>
                   </div>
                   <div class="col-12 col-lg-6">
                      <div class="form-group">
                         <label>Last Name :</label>
-                        <input type="text" class="form-control" id="lastname">
+                        <input type="text" class="form-control" id="lastname" name="lastname">
                      </div>
                   </div>
                   <div class="col-12 col-lg-6">
                      <div class="form-group">
                         <label>Email :</label>
-                        <input type="text" class="form-control" id="email">
+                        <input type="text" class="form-control" id="email"  name="email">
                      </div>
                   </div>
                   <div class="col-12 col-lg-6">
                      <div class="form-group">
                         <label>Phone :</label>
-                        <input type="text" class="form-control" id="phone">
+                        <input type="text" class="form-control" id="phone" name="phone">
                      </div>
                   </div>
                   <div class="col-12">
                      <div class="form-group">
                         <label>Message</label>
-                        <textarea class="form-control" id="message" rows="4" spellcheck="false"></textarea>
+                        <textarea class="form-control" id="message" rows="4" spellcheck="true" placeholder="Your message should be at most, 300 words" name="message"></textarea>
                      </div>
                   </div>
                   <div class="col-12">
-                     <input type="submit" class="btn btn-main rounded font-weight-bold px-4" value="SUBMIT">
+                     <input type="submit" class="btn btn-main rounded font-weight-bold px-4" value="SUBMIT" id="submit">
                   </div>
                </div>
             </form>
@@ -485,5 +509,48 @@ header .navigation li a:hover{
         </div>
       </div>
 </footer>
+
+<script>
+  var form  = document.getElementById('contact-form')
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault()
+    window.alert('Your message has been submitted succesfully. We will work on your request as soon as possible. Click OK to continue shopping.')
+  })
+
+  document.getElementById('submit').addEventListener('click', function(e){
+    submitForm()
+  })
+
+
+  function submitForm(){
+    formData = {
+      'firstname': null,
+      'lastname': null,
+      'email': null,
+      'phone': null,
+      'message': null,
+    }
+
+    formData.firstname = form.firstname.value
+    formData.lastname = form.lastname.value
+    formData.email = form.email.value
+    formData.phone = form.phone.value
+    formData.message = form.message.value
+
+    var url = "/process_contact_form/"
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "appliction/json",
+        "X-CSRFToken": csrftoken,
+      },
+      body: JSON.stringify({'form': formData}),
+    }).then((data) => {
+      console.log("success", data);
+    })
+  }
+</script>
     </body>
 </html>
